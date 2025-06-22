@@ -24,6 +24,7 @@
 
 > 💡 Think of it as *"pushing the biggest element to the end like a bubble floating to the top."*
 
+---
 ### 🔹 Insertion Sort — Time Complexity: O(N²)
 
 - **Idea:** Build the sorted part of the list one element at a time by inserting each element into its correct position.
@@ -33,3 +34,16 @@
 - Best Case: O(n)
   
 > 💡 Think of it as *"taking cards in your hand one by one and inserting each into its right place among the already sorted cards."*
+
+---
+### 🔹 Merge Sort — Time Complexity: O(N log N)
+
+- **Idea:** Divide the list into halves, sort them recursively, and then merge them back together.
+- **Approach:**
+  1. Recursively divide the list until single elements remain.
+  2. Merge sorted halves using a helper function.
+- **Space Complexity:** O(N) (due to new lists during merge)
+- **Stable:** ✅
+
+> 💡 Think of it as *"dividing a problem into smaller parts, solving them, and merging the solutions."*
+---
