@@ -58,3 +58,26 @@ nums = [4, 2, 7, 1]
 sorted_nums = merge_sort(nums)
 print(sorted_nums)
 
+def quick_sort_inplace(nums, low, high):
+    if low < high:
+        p = partition(nums, low, high)
+        quick_sort_inplace(nums, low, p - 1)
+        quick_sort_inplace(nums, p + 1, high)
+
+def partition(nums, low, high):
+    pivot = nums[low]
+    i = low + 1
+    j = high
+
+    while True:
+        while i <= j and nums[i] <= pivot:
+            i += 1
+        while i <= j and nums[j] > pivot:
+            j -= 1
+        if i <= j:
+            nums[i], nums[j] = nums[j], nums[i]
+        else:
+            break
+
+    nums[low], nums[j] = nums[j], nums[low]
+    return j
