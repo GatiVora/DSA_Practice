@@ -43,7 +43,32 @@
   1. Recursively divide the list until single elements remain.
   2. Merge sorted halves using a helper function.
 - **Space Complexity:** O(N) (due to new lists during merge)
-- **Stable:** ✅
+
 
 > 💡 Think of it as *"dividing a problem into smaller parts, solving them, and merging the solutions."*
+
 ---
+
+### 🔹 Quick Sort — Time Complexity: Avg O(N log N), Worst O(N²)
+
+- **Idea:** Choose a pivot and partition the array into two halves:
+  - Elements ≤ pivot go left
+  - Elements > pivot go right
+- Recursively sort the partitions.
+- **Space Complexity:** O(log N) for in-place version (due to recursion)
+
+
+> 💡 Think of it as *"breaking the list around a pivot and sorting both sides."*
+
+---
+
+### 🧠 Summary
+
+| Algorithm       | Best Time | Avg Time   | Worst Time | Space     | Stable 
+|----------------|-----------|------------|------------|-----------|--------
+| Selection Sort | O(N²)     | O(N²)      | O(N²)      | O(1)      | ❌     
+| Bubble Sort    | O(N)      | O(N²)      | O(N²)      | O(1)      | ✅     
+| Insertion Sort | O(N)      | O(N²)      | O(N²)      | O(1)      | ✅    
+| Merge Sort     | O(N log N)| O(N log N) | O(N log N) | O(N)      | ✅    
+| Quick Sort     | O(N log N)| O(N log N) | O(N²)      | O(log N)⁽*⁾ | ❌   
+
